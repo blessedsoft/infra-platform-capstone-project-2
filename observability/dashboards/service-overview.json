@@ -1,0 +1,1 @@
+{"title":"Service Overview","panels":[{"type":"timeseries","title":"Request rate","targets":[{"expr":"sum(rate(http_requests_total[5m])) by (service)"}]},{"type":"timeseries","title":"Error rate","targets":[{"expr":"sum(rate(http_request_errors_total[5m])) by (service)"}]}],"schemaVersion":39}

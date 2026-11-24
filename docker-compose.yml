@@ -1,0 +1,12 @@
+services:
+  gateway:
+    build: .
+    environment: {SERVICE_NAME: gateway, CATALOG_URL: http://catalog:8080, ORDERS_URL: http://orders:8080}
+    ports: ["8080:8080"]
+    depends_on: [catalog, orders]
+  catalog:
+    build: .
+    environment: {SERVICE_NAME: catalog}
+  orders:
+    build: .
+    environment: {SERVICE_NAME: orders}

@@ -1,0 +1,5 @@
+tempo:
+  metricsGenerator: {enabled: true}
+  receivers:
+    jaeger: {protocols: {thrift_http: {}, grpc: {}}}
+    otlp: {protocols: {http: {}, grpc: {}}}

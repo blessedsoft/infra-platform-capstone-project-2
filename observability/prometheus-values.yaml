@@ -1,0 +1,13 @@
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+    ruleSelectorNilUsesHelmValues: false
+grafana:
+  admin:
+    existingSecret: grafana-admin
+  sidecar:
+    dashboards:
+      enabled: true
+      label: grafana_dashboard
+alertmanager:
+  enabled: true

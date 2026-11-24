@@ -1,0 +1,1 @@
+{"title":"Application Logs","panels":[{"type":"logs","title":"Recent service logs","targets":[{"expr":"{namespace=\"capstone-staging\"}"}]},{"type":"timeseries","title":"Error log volume","targets":[{"expr":"sum(rate({namespace=\"capstone-staging\"} |= \"error\" [5m]))"}]}],"schemaVersion":39}

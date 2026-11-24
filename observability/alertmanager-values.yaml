@@ -1,0 +1,12 @@
+config:
+  global: {resolve_timeout: 5m}
+  route:
+    receiver: platform-oncall
+    routes:
+      - {matchers: [severity="critical"], receiver: platform-oncall}
+      - {matchers: [team="infrastructure"], receiver: infrastructure}
+  receivers:
+    - name: platform-oncall
+      webhook_configs: [{url: http://alert-webhook.invalid/platform-oncall}]
+    - name: infrastructure
+      webhook_configs: [{url: http://alert-webhook.invalid/infrastructure}]

@@ -1,0 +1,1 @@
+{"title":"Infrastructure","panels":[{"type":"timeseries","title":"Node CPU","targets":[{"expr":"100 - avg(rate(node_cpu_seconds_total{mode=\"idle\"}[5m])) * 100"}]},{"type":"timeseries","title":"Memory available","targets":[{"expr":"node_memory_MemAvailable_bytes"}]}],"schemaVersion":39}
