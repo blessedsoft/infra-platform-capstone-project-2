@@ -3,6 +3,6 @@ kind: Application
 metadata: {name: capstone-staging, namespace: argocd}
 spec:
   project: default
-  source: {repoURL: https://github.com/REPLACE_ORG/REPLACE_REPO.git, targetRevision: main, path: gitops/overlays/staging}
+  source: {repoURL: https://github.com/blessedsoft/infra-platform-capstone-project-2.git, targetRevision: main, path: gitops/overlays/staging}
   destination: {server: https://kubernetes.default.svc, namespace: capstone-staging}
   syncPolicy: {automated: {prune: true, selfHeal: true}, syncOptions: [CreateNamespace=true]}

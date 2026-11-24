@@ -3,5 +3,5 @@ kind: Application
 metadata: {name: capstone-production, namespace: argocd}
 spec:
   project: default
-  source: {repoURL: https://github.com/REPLACE_ORG/REPLACE_REPO.git, targetRevision: main, path: gitops/overlays/production}
+  source: {repoURL: https://github.com/blessedsoft/infra-platform-capstone-project-2.git, targetRevision: main, path: gitops/overlays/production}
   destination: {server: https://kubernetes.default.svc, namespace: capstone-production}

@@ -3,12 +3,12 @@ kind: Kustomization
 namespace: capstone-production
 resources: [../../base]
 images:
-  - name: ghcr.io/REPLACE_OWNER/capstone-gateway
-    newName: ghcr.io/REPLACE_OWNER/capstone-gateway
+  - name: ghcr.io/blessedsoft/capstone-gateway
+    newName: ghcr.io/blessedsoft/capstone-gateway
     newTag: PROMOTE_TAG
-  - name: ghcr.io/REPLACE_OWNER/capstone-catalog
-    newName: ghcr.io/REPLACE_OWNER/capstone-catalog
+  - name: ghcr.io/blessedsoft/capstone-catalog
+    newName: ghcr.io/blessedsoft/capstone-catalog
     newTag: PROMOTE_TAG
-  - name: ghcr.io/REPLACE_OWNER/capstone-orders
-    newName: ghcr.io/REPLACE_OWNER/capstone-orders
+  - name: ghcr.io/blessedsoft/capstone-orders
+    newName: ghcr.io/blessedsoft/capstone-orders
     newTag: PROMOTE_TAG

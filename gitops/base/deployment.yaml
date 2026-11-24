@@ -9,7 +9,7 @@ spec:
     spec:
       containers:
         - name: gateway
-          image: ghcr.io/REPLACE_OWNER/capstone-gateway:IMAGE_TAG
+          image: ghcr.io/blessedsoft/capstone-gateway:IMAGE_TAG
           env:
             - {name: SERVICE_NAME, value: gateway}
             - {name: CATALOG_URL, value: http://catalog:8080}
@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
         - name: catalog
-          image: ghcr.io/REPLACE_OWNER/capstone-catalog:IMAGE_TAG
+          image: ghcr.io/blessedsoft/capstone-catalog:IMAGE_TAG
           env: [{name: SERVICE_NAME, value: catalog}]
           ports: [{name: http, containerPort: 8080}]
           readinessProbe: {httpGet: {path: /healthz, port: http}}
@@ -48,7 +48,7 @@ spec:
     spec:
       containers:
         - name: orders
-          image: ghcr.io/REPLACE_OWNER/capstone-orders:IMAGE_TAG
+          image: ghcr.io/blessedsoft/capstone-orders:IMAGE_TAG
           env: [{name: SERVICE_NAME, value: orders}]
           ports: [{name: http, containerPort: 8080}]
           readinessProbe: {httpGet: {path: /healthz, port: http}}
