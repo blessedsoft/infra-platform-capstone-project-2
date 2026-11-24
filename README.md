@@ -36,6 +36,8 @@ curl http://localhost:8080/api/catalog
 curl http://localhost:8080/metrics
 ```
 
+For the complete Windows, Kubernetes, and observability walkthrough, see [`docs/quickstart.md`](docs/quickstart.md).
+
 ## CI and GitOps
 
 Pushes to any branch run lint, unit tests, and a Trivy filesystem scan. A push to `main` builds three images and pushes them to GHCR, then updates the staging image tag in the GitOps repository. Set `GITOPS_REPOSITORY` and a `GITOPS_TOKEN` secret for the update step; when this repository is used as a single-repository demo, the workflow can update its own `gitops/` directory instead.
