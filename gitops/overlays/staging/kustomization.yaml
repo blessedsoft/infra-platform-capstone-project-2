@@ -5,10 +5,10 @@ resources: [../../base]
 images:
   - name: ghcr.io/REPLACE_OWNER/capstone-gateway
     newName: ghcr.io/REPLACE_OWNER/capstone-gateway
-    newTag: IMAGE_TAG
+    newTag: 8ef7a14ced8c04ef54a2f1e1e718535a51a46c93
   - name: ghcr.io/REPLACE_OWNER/capstone-catalog
     newName: ghcr.io/REPLACE_OWNER/capstone-catalog
-    newTag: IMAGE_TAG
+    newTag: 8ef7a14ced8c04ef54a2f1e1e718535a51a46c93
   - name: ghcr.io/REPLACE_OWNER/capstone-orders
     newName: ghcr.io/REPLACE_OWNER/capstone-orders
-    newTag: IMAGE_TAG
+    newTag: 8ef7a14ced8c04ef54a2f1e1e718535a51a46c93
