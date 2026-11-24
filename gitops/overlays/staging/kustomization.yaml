@@ -5,10 +5,10 @@ resources: [../../base]
 images:
   - name: ghcr.io/blessedsoft/capstone-gateway
     newName: ghcr.io/blessedsoft/capstone-gateway
-    newTag: 8ef7a14ced8c04ef54a2f1e1e718535a51a46c93
+    newTag: dabf3b12679cf1496ffb33d91afa9a99354f9837
   - name: ghcr.io/blessedsoft/capstone-catalog
     newName: ghcr.io/blessedsoft/capstone-catalog
-    newTag: 8ef7a14ced8c04ef54a2f1e1e718535a51a46c93
+    newTag: dabf3b12679cf1496ffb33d91afa9a99354f9837
   - name: ghcr.io/blessedsoft/capstone-orders
     newName: ghcr.io/blessedsoft/capstone-orders
-    newTag: 8ef7a14ced8c04ef54a2f1e1e718535a51a46c93
+    newTag: dabf3b12679cf1496ffb33d91afa9a99354f9837
