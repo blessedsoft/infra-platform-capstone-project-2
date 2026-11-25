@@ -1,12 +1,22 @@
-config:
-  global: {resolve_timeout: 5m}
-  route:
-    receiver: platform-oncall
-    routes:
-      - {matchers: [severity="critical"], receiver: platform-oncall}
-      - {matchers: [team="infrastructure"], receiver: infrastructure}
-  receivers:
-    - name: platform-oncall
-      webhook_configs: [{url: http://alert-webhook.invalid/platform-oncall}]
-    - name: infrastructure
-      webhook_configs: [{url: http://alert-webhook.invalid/infrastructure}]
+alertmanager:
+  enabled: true
+  alertmanagerSpec:
+    secrets: [alertmanager-smtp]
+  config:
+    global:
+      resolve_timeout: 5m
+      smtp_smarthost: smtp.gmail.com:587
+      smtp_from: olajidesolomon11@gmail.com
+      smtp_auth_username: olajidesolomon11@gmail.com
+      smtp_auth_password_file: /etc/alertmanager/secrets/alertmanager-smtp/p
+      smtp_require_tls: true
+    route:
+      receiver: platform-oncall
+      routes:
+        - {matchers: [severity="critical"], receiver: platform-oncall}
+        - {matchers: [team="infrastructure"], receiver: infrastructure}
+    receivers:
+      - name: platform-oncall
+        email_configs: [{to: olajidesolomon11@gmail.com}]
+      - name: infrastructure
+        email_configs: [{to: olajidesolomon11@gmail.com}]

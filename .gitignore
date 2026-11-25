@@ -4,3 +4,24 @@ __pycache__/
 .pytest_cache/
 .coverage
 .env
+.env.*
+!.env.example
+
+# Local logs, reports, and OS/editor files
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local credentials and temporary command output
+*.b64
+*.pem
+*.key
+*.secret
+/password
+/grafana-
+/kubectl
+
+# Local tool state
+.kube/
